@@ -50,23 +50,112 @@
    color: black;
  }
 
- .greeting-msg{
-     display: flex;
-     justify-content: row;
+ #nav{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #fafafb;
+    border: darkgrey;
+    margin-left: auto;
+    margin-right: auto;
+    height:50px;
+    width:100%;
  }
 
-  .icon-msg{
-    float: left;
-    display: block;
-    color: burlywood;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+ #icon{
+    display:flex;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 16px;
  }
 
- .icon-msg:hover {
-     background-color: bisque;
-     color: black;
+ #search-bar{
+    display: flex;
+    height: 28px;
+    width:400px;
+    border-radius: 5px;
+    border:1px solid darkgrey;
+    position: relative;
+    top: 5px;
  }
 
- 
+ #search-text input[type="text"]{
+    border:whitesmoke;
+    height: 75%;
+    width:320%;
+    position: relative;
+    top:2px;
+ }
+
+ #search-icon{
+    position: relative;
+    top: 3px;
+ }
+
+
+.button{
+   display: flex;
+   position: relative;
+   top: 3px;
+}
+
+.button2{
+  background-color: darkgrey;
+  color:rgb(101, 125, 191);
+  padding: 8px 15px;
+  text-align: center;
+  cursor: pointer;
+  margin: 2px 2px;
+  border-radius: 4px;
+  font-size: 13px Arial;
+} 
+
+.button1{
+   background-color: rgb(87, 126, 231);
+   color: #fff;
+   padding: 8px 15px;
+   text-align: center;
+   cursor: pointer;
+   margin: 2px 2px;
+   border-radius: 4px;
+} 
+
+.button1:hover, .button2:hover{
+   background-color: grey;
+}
+
+#nav span #logo-text{
+   font-size: 25px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+   position: relative;
+   top:17px;
+   display: flex;
+   flex-wrap: nowrap;
+}
+#nav span #logo-text #ans{
+   font-weight: bolder;
+}
+
+#nav span #logo-text #get{
+   font-weight: lighter;
+   color: lightsalmon;
+}
+
+.header-group{
+   display:flex;
+   justify-content: space-between;
+   position: relative;
+   top:14px;
+}
+
+.header-button{
+   background-color: rgb(87, 126, 231);
+   color: #fff;
+   position: relative;
+   bottom: 15px; 
+   padding: 2px 4px;
+   text-align: center;
+   cursor: pointer;
+   margin: 10px 10px;
+   border-radius: 4px;
+} 
