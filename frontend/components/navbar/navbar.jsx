@@ -28,7 +28,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div id="nav">
       <Link to="/" className="header-link">
         <span id="icon">
-          <img src="assets/so-icon.svg" height="70" width="40" />
+          <img src={window.logoURL} height="70" width="40" />
           <div id="logo-text">
             <div id="get">get</div>
             <div id="ans">answers</div>
@@ -38,7 +38,7 @@ const NavBar = ({ currentUser, logout }) => {
       <form action="">
         <div id="search-bar">
           <div id="search-icon">
-            <img src="assets/search.svg" height="20" width="30" />
+            <img src={window.searchURL} height="20" width="30" />
           </div>
           <div id="search-text">
             <input type="text" placeholder="Search..." />
