@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
+import QuestionsContainer from './../questions/questions_container';
 
 const NavBar = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -11,6 +12,7 @@ const NavBar = ({ currentUser, logout }) => {
   );
   const personalGreeting = () => (
     <hgroup className="header-group">
+      
       <img src="assets/prof-icon.png" height="20" width="30" />
       <img src="assets/inbox-icon.png" height="20" width="30" />
       <img src="assets/trophy-icon.png" height="20" width="30" />
@@ -25,27 +27,27 @@ const NavBar = ({ currentUser, logout }) => {
   return (
     <div id="nav">
       <Link to="/" className="header-link">
-        <span id='icon'>
+        <span id="icon">
           <img src="assets/so-icon.svg" height="70" width="40" />
-          <div id='logo-text'>
-            <div id='get'>get</div>
-            <div id='ans'>answers</div>
+          <div id="logo-text">
+            <div id="get">get</div>
+            <div id="ans">answers</div>
           </div>
         </span>
       </Link>
       <form action="">
-        <div id='search-bar'>
-        <div id='search-icon'>
-          <img src="assets/search.svg" height="20" width="30" />
-        </div>
-        <div id='search-text'>
-          <input type="text" placeholder='Search...' />
+        <div id="search-bar">
+          <div id="search-icon">
+            <img src="assets/search.svg" height="20" width="30" />
+          </div>
+          <div id="search-text">
+            <input type="text" placeholder="Search..." />
           </div>
         </div>
-        </form>
+      </form>
       {currentUser ? personalGreeting() : sessionLinks()}
-      </div>
-    );
+    </div>
+  );
   };
   
   export default NavBar;

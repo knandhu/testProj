@@ -6,6 +6,9 @@ import NavBarContainer from "./navbar/navbar_container";
 import SignUpFormContainer from "./session_form/signup_form_container";
 import LogInFormContainer from "./session_form/login_form_container";
 import DemoContainer from "./session_form/demo_container";
+import QuestionsContainer from "./questions/questions_container";
+import CreateQuestionFormContainer from "./questions/create_question_form_container";
+
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
@@ -17,7 +20,9 @@ const App = () => (
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/demo" component={DemoContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-      <ProtectedRoute exact path="/questions"/>
+      {/* <ProtectedRoute path="/questions" component={QuestionsContainer} /> */}
+      <ProtectedRoute exact path="/" component={QuestionsContainer} />
+      <ProtectedRoute exact path="/ask" component={CreateQuestionFormContainer}/>
     </Switch>
   </div>
 );
